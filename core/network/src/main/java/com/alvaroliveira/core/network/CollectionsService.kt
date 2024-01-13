@@ -6,11 +6,9 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface CollectionsService {
-    //@Headers("Authorization: Bearer XjajOkXQppRePjDsMBpIEt8Z")
     @GET("users/{id}/collections")
     suspend fun getAllCollections(@Path("id") id: String): List<CollectionsItem>
 
-    //@Headers("Authorization: Bearer XjajOkXQppRePjDsMBpIEt8Z")
     @GET("users/{userId}/collections/{collectionId}/items/")
     suspend fun getTopItemsCollection(
         @Path("userId") userId: String,
